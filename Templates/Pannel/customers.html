@@ -1,0 +1,51 @@
+{% extends "Pannel/panHerit.html" %}
+{% load static %}
+
+<!--Header part-->
+{% block extra_head %}
+
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/customers.css' %}">
+    <title>NittoKicks:|:: Customers</title>
+
+{% endblock %}
+
+<!--Body part-->
+{% block content %}
+
+    <div class="custB">
+        <div class="head">
+            <h2>CUSTOMERS</h2>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="Search Customer" name="customer" id="">
+                <button type="submit"><i class="fas fa-search" id="seaBut"></i></button>
+            </form>
+        </div>
+        <div class="prodMany">
+            <!--each ustomer-->
+            {% for profile in profiles %}
+            <div class="singleP">
+                <div><span>{{profile.profile_id}}</span></div>
+                <div><span>{{profile.first_name}}</span></div>
+                <div><span>{{profile.last_name}}</span></div>
+                <div><span>{{profile.sex}}</span></div>
+                <div><span>{{profile.email}}</span></div>
+                <div><span>{{profile.phone}}</span></div>
+                <div class="cutIm" >
+                    <img src="{{profile.Profimage_url}}" alt="">
+                </div>
+                <div class="act">
+                    <a href="{% url 'delCustomer' profile.user.username %}"><i class="far fa-trash-alt" id="del"></i></a>
+                    <a href=""><i class="fas fa-ellipsis-v" id="info"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+
+{% endblock %}

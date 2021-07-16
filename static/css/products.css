@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.theP {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.addProd {
+    width: 100%;
+    text-align: center;
+}
+
+.addProd a {
+    font-size: 20px;
+    color: rgb(45, 153, 45);
+}

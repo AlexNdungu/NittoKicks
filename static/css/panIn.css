@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* Header Nav */
+
+.panHead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    background-color: #1B1B32;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav {
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#bars,#home,#logout {
+    font-size: 30px;
+}
+
+#bars {
+    color: rgb(199, 198, 245);
+}
+
+#home {
+    color: rgb(62, 62, 233);
+}
+
+#logout {
+    color: rgb(226, 67, 67);
+}
+
+.nav .profImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: azure;
+}
+
+.links{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.heading {
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h2 {
+    font-size: 30px;
+    color: rgb(241, 231, 231);
+}
+
+/* Side Navigation */
+
+.sideNav {
+    z-index: 1000;
+    position: fixed;
+    height: calc(100vh - 80px);
+    width: 200px;
+    background-color: #1B1B32;
+    transition: all .9s ease-in-out;
+    margin-left: -100%;
+    margin-top: -10px;
+}
+
+.admin {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.admin div {
+    margin-left: 30px;
+    height: 100%;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+#log {
+    font-size: 23px;
+    color: rgb(209, 207, 233);
+    margin-left: 10px;
+}
+
+.admin div a {
+    color: rgb(209, 207, 233);
+}
+
+.social {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#soc {
+    font-size: 40px;
+    color: rgb(143, 134, 235);
+}

@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/shoeInf.css' %}">
+    <title>NittoKicks:|::{{productDesc.shoe_name}} </title>
+</head>
+<body>
+    
+    <div class="all">
+        <div class="head">
+            <a href=""><i class="fas fa-home" id="home"></i></a>
+            <h3>{{productDesc.shoe_name}}</h3>
+            <h3><i class="fas fa-dollar-sign" id="dollar"></i>{{productDesc.price}}</h3>
+            <a href=""><i class="fas fa-cart-plus" id="home"></i></a>
+        </div>
+        <div class="body">
+            <div class="pic">
+                <img src="{{productDesc.image_url}}" alt="">
+            </div>
+            <div class="descr">
+                <h3>Description</h3>
+                <div class="lineDesc"></div>
+                <p class="info" >
+                    {{productDesc.description}}</p>
+                <div class="restDes">
+                    <div class="indv">
+                        <p>Color</p>
+                        <span>{{productDesc.colors}}</span>
+                    </div>
+                    <div class="indv">
+                        <p>Size</p>
+                        <span>{{productDesc.shoe_size_from}} - {{productDesc.shoe_size_to}}</span>
+                    </div>
+                    <div class="indv">
+                        <p>Category</p>
+                        <span>{{productDesc.shoe_sex}}</span>
+                    </div>
+                    <div class="indv">
+                        <p>Status</p>
+                        <span>{{productDesc.shoe_availability}}</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a href=""><i class="fas fa-edit" id="update"></i></a>
+                    <a href=""><i class="far fa-trash-alt" id="del"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>

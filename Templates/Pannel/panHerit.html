@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    {% block extra_head %}{% endblock %}
+    <link rel="stylesheet" href="{% static '/css/panIn.css' %}">
+    <title>NittoKicks:|:: Pannel</title>
+</head>
+<body>
+    
+    <!-- Upper Navigation -->
+    <div class="panHead">
+        <div class="nav">
+            <i class="fas fa-bars" id="bars"></i>
+            <div class="profImg">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="heading">
+            <h2>NITTOLICKS PANEL</h2>
+        </div>
+        <div class="links">
+                <a href=""><i class="fas fa-home" id="home"></i></a>
+                <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt" id="logout"></i></a>
+        </div>
+    </div>
+
+    <!-- Side Navigation -->
+
+    <div class="sideNav">
+        <div class="admin">
+            <i class="far fa-user" id="log"></i>
+            <div><a href="">Admin Profile</a></div>
+        </div>
+        <div class="admin">
+            <i class="far fa-user" id="log"></i>
+            <div><a href="">User Profile</a></div>
+        </div>
+        <div class="admin">
+            <i class="fas fa-users" id="log"></i>
+            <div><a href="">Customers</a></div>
+        </div>
+        <div class="admin">
+            <i class="fab fa-product-hunt" id="log"></i>
+            <div><a href="">Products</a></div>
+        </div>
+        <div class="admin">
+            <i class="fas fa-sort-amount-up-alt" id="log"></i>
+            <div><a href="">Placed Orders</a></div>
+        </div>
+        <div class="admin">
+            <i class="fas fa-shopping-cart" id="log"></i>
+            <div><a href="">Place Order</a></div>
+        </div>
+        <div class="social">
+            <a href=""><i class="fab fa-facebook" id="soc"></i></a>
+            <a href=""><i class="fab fa-instagram" id="soc"></i></a>
+        </div>
+    </div>
+
+    <!-- Django Template Extent -->
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+{% block java %}
+<script src="{% static '/js/panIn.js' %}"></script>
+{% endblock %}
+</html>

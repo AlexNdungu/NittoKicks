@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Cart Header */
+
+#home, #log {
+    font-size: 25px;
+    color: rgb(240, 241, 255);
+}
+
+.hdCart {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #4a4a8a;
+}
+
+.cent {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} 
+
+.total {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total span {
+    font-size: 20px;
+    font-weight: bold;
+    color: ;
+}
+
+.totTh {
+    width: 30%;
+    height: 80%;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.totTh p {
+    color:rgb(240, 241, 255);
+    font-weight: bold;
+}
+
+/* Cart Items */
+
+.mainIt {
+    width: 100%;
+    height: 530px;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.items {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #f3f3fc;
+    border-bottom: 1px solid #f3f3fc;
+}
+
+.items span {
+    font-size: 19px;
+    color: #194F8D;
+}
+
+.prImage {
+    width: 90px;
+    height: 90px;
+    background-color: black;
+}
+
+.prodAm {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#add, #subtract {
+    font-size: 30px;
+    color: rgb(19, 128, 15);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+#add:hover, #subtract:hover {
+    transform: scale(1.2);
+}
+
+#multiply {
+    font-size: 35px;
+    color: rgb(19, 128, 15);
+}
+
+.price p {
+    font-size: 19px;
+    color: #194F8D;
+}
+
+#remove {
+    font-size: 25px;
+    color: rgb(228, 72, 72);
+    transition: all .5s ease-in-out;
+}
+
+#remove:hover {
+    transform: scale(1.2);
+}
+
+/* cart add section */
+
+.addItem {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#cartAdd {
+    font-size: 40px;
+    color: #4a4a8a;
+    transition: all .5s ease-in-out;
+}
+
+#cartAdd:hover {
+    transform: scale(1.2);
+}

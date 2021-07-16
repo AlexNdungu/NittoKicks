@@ -1,0 +1,199 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/inher.css' %}">
+    <title>NittoKicks:|:: HomePage</title>
+</head>
+<body>
+    <!--The Header-->
+
+    <div class="header">
+        <div class="sec1">
+            <div class="con">
+                <span>+254786561315</span>
+                <div class="lin"></div>
+                <a href=""><span>Contact Us</span></a>
+                <div class="lin"></div>
+                <div class="sic">
+                    <a href=""><i class="fab fa-facebook" id="soc"></i></a>
+                    <a href=""><i class="fab fa-instagram" id="soc"></i></a>
+                </div>
+            </div>
+            <div class="login">
+                <i class="far fa-user" id="log"></i>
+                <a href=""><span>Login</span></a>
+            </div>
+        </div>
+        <div class="sec2">
+            <div class="sec21">
+                <div class="search">
+                    <form action="">
+                        <input type="text" placeholder="Search Product" id="ser">
+                        <button type="submit"><i class="fas fa-search" id="seaBut"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="sec22">
+                <h2>NITTOKICKS</h2>
+            </div>
+            <div class="sec23">
+                <a href=""><i class="fas fa-shopping-cart" id="cart" ></i></a>
+            </div>
+        </div>
+        <div class="sec3">
+            <div class="nav">
+                <a href=""><span>Home</span></a>
+                <a href=""><span>Male’s</span></a>
+                <a href=""><span>Female’s</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!--The Slider-->
+    <div class="big"> 
+        <div class="slider">
+        <div class="images">
+            <img src="{% static '/images/slider/slider5.jpg' %}" id="lastClone" alt="">
+            <img src="{% static '/images/slider/slider1.jpg' %}" alt="">
+            <img src="{% static '/images/slider/slider2.jpg' %}" alt="">
+            <img src="{% static '/images/slider/slider3.jpg' %}" alt="">
+            <img src="{% static '/images/slider/slider4.jpg' %}" alt="">
+            <img src="{% static '/images/slider/slider5.jpg' %}" alt="">
+            <img src="{% static '/images/slider/slider1.jpg' %}"  id="firstClone" alt="">
+        </div>
+        </div>
+        <div class="buttS">
+            <div class="next"><i class="fas fa-chevron-circle-right" id="next"></i></div>
+            <div class="prev"><i class="fas fa-chevron-circle-left" id="prev"></i></div>
+        </div>
+    </div>
+
+    <!--The Products-->
+
+    <div class="prods">
+        <div class="hd">
+            <h3>OUR PRODUCTS</h3>
+        </div>
+        <div class="prs">
+
+            <!--Products-->
+            <div class="theps">
+                <div class="im"><img src="{% static '/images/shoe1.jpg' %}" alt=""></div>
+                <div class="pc">
+                    <div class="pc1">
+                        <span>Vans</span>
+                        <a href=""><i class="fas fa-edit" id="update"></i></a>
+                    </div>
+                    <div class="pc2">
+                        <div class="amt"><i class="fas fa-dollar-sign" id="dollar"></i><span>1600</span></div>
+                        <div class="action">
+                            <a href=""><i class="far fa-trash-alt" id="del"></i></a>
+                            <a href=""><i class="fas fa-ellipsis-v" id="info"></i></a>
+                            <a href=""><i class="fas fa-shopping-cart" id="cat"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theps">
+                <div class="im"><img src="{% static '/images/shoe1.jpg' %}" alt=""></div>
+                <div class="pc">
+                    <div class="pc1">
+                        <span>Vans</span>
+                        <a href=""><i class="fas fa-edit" id="update"></i></a>
+                    </div>
+                    <div class="pc2">
+                        <div class="amt"><i class="fas fa-dollar-sign" id="dollar"></i><span>1600</span></div>
+                        <div class="action">
+                            <a href=""><i class="far fa-trash-alt" id="del"></i></a>
+                            <a href=""><i class="fas fa-ellipsis-v" id="info"></i></a>
+                            <a href=""><i class="fas fa-shopping-cart" id="cat"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theps">
+                <div class="im"><img src="{% static '/images/shoe1.jpg' %}" alt=""></div>
+                <div class="pc">
+                    <div class="pc1">
+                        <span>Vans</span>
+                        <a href=""><i class="fas fa-edit" id="update"></i></a>
+                    </div>
+                    <div class="pc2">
+                        <div class="amt"><i class="fas fa-dollar-sign" id="dollar"></i><span>1600</span></div>
+                        <div class="action">
+                            <a href=""><i class="far fa-trash-alt" id="del"></i></a>
+                            <a href=""><i class="fas fa-ellipsis-v" id="info"></i></a>
+                            <a href=""><i class="fas fa-shopping-cart" id="cat"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+        </div>
+    </div>
+
+    <!--Products section-->
+
+    <div class="about"> 
+        <div class="hab">
+            <h3>NITTOKICKS</h3>
+            <div class="hsep"></div>
+            <h6>We Offer Quality At An Affordable Price</h6>
+        </div>
+        <div class="text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi eaque libero, beatae magnam dolores voluptas fugit dolorem aut dicta ad consectetur incidunt culpa ea illo alias totam vero nisi. Repudiandae.</p>
+        </div>
+    </div>
+
+    <!--Footer section-->
+
+    <div class="footer">
+        <div class="fot1">
+            <div class="fot11">
+                <div>
+                    <div><i class="fab fa-whatsapp" id="cont"></i><span>+254786561315</span></div>
+                    <div><i class="fas fa-phone-alt" id="cont"></i><span>+254757756114</span></div>
+                    <div><i class="fas fa-envelope" id="cont"></i><span>tonniekamau64@gmail.com</span></div>
+                </div>
+            </div>
+            <div class="fot12">
+                <div>
+                    <a href="">Home</a>
+                    <a href="">Male's</a>
+                    <a href="">Female's</a>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+            <div class="fot13">
+                <div>
+                    <a href=""><i class="fas fa-shopping-cart" id="soc" ></i></a>
+                    <a href=""><i class="far fa-user" id="soc"></i></a>
+                </div>
+                <div>
+                    <a href=""><i class="fab fa-facebook" id="soc"></i></a>
+                    <a href=""><i class="fab fa-instagram" id="soc"></i></a>
+                </div>
+                </div>
+        </div>
+    </div>
+    <div class="lowerF">
+        <div class="cp"><i class="far fa-copyright" id="copy"></i><span>2021 NITTOKICKS</span></div>
+        <div class="tem">
+            <a href=""><span>Terms And Conditions</span></a>
+            <a href=""><span>Privacy Policy</span></a>
+        </div>
+    </div>
+
+</body>
+<script src="{% static '/js/main.js' %}"></script>
+</html>

@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.logbod {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+/* pic section */
+
+.img {
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.img::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0,0.3);
+}
+
+
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    text-align: center;
+    transform: rotate(-30deg);;
+}
+
+.text h4 {
+    color: white;
+    font-size: 70px;
+    font-weight: lighter;
+}
+
+.text h2 {
+    font-size: 120px;
+    color: #59577D;
+}
+
+/* login section */
+
+.login {
+    height: 100%;
+    width: 50%;
+}
+
+.login .sh {
+    height: 25%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.mainSh {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.show {
+    height: 5px;
+    width: 300px;
+    border: 1px solid #B6B4DD;
+    border-radius: 50px;
+    position: relative;
+}
+
+.tSh {
+    height: 4px;
+    width: 150px;
+    background-color: #B6B4DD;
+    position: absolute;
+    transition: all .5s ease-in-out ;
+    left: 0%;
+}
+
+.theLinks {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.theLinks a {
+    color: #59577D;
+}
+
+.login h2 {
+    font-size: 40px;
+    color: #59577D;
+    text-align: center;
+}
+
+/* Login Form  */
+
+.deForm {
+    width: 100%;
+    height: 50%;
+    margin-top: -30px;
+    display: flex;
+    overflow: hidden;
+}
+
+.deForm form {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inps div {
+    height: 50px;
+    width: 300px;
+    border-bottom: 1px solid #bcbae7;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.inps input {
+    background: none;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #4c4974;
+}
+
+.inps input::placeholder {
+    color: #adaccc;
+}
+
+
+#login {
+    font-size: 23px;
+    margin: 10px;
+    color: #59577D;
+}
+
+.fP {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.fP button {
+    outline: none;
+    border: none;
+    background-color: #59577D;
+    width: 250px;
+    height: 35px;
+    border-radius: 40px;
+    font-size: 20px;
+    color: rgb(227, 226, 238);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.fpass {
+    color: #2685f3;
+}
+
+.ghome {
+    color: #66AE69;
+    font-size: 20px;
+}

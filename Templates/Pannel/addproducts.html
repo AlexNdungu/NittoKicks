@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/addProduct.css' %}">
+    <title>Nittokicks :|:: NewProduct</title>
+</head>
+<body>
+
+    <div class="bk">
+        <a href="{% url 'adminProf' %}"><i class="far fa-user-circle" id="profile" ></i></a>
+        <a href="{% url 'allProducts' %}"><i class="fab fa-product-hunt" id="products" ></i></a>
+    </div>
+
+    <div class="placeForm">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="imageUp">
+                {{productAddForm.shoe_image}}
+            </div>
+            <div class="input">
+                <span>Shoe Name:</span>
+                {{productAddForm.shoe_name}}
+            </div>
+            <div class="drop">
+                <span>Shoe Brand:</span>
+                {{productAddForm.shoe_brand}}
+            </div>
+            <div class="drop">
+                <span>Shoe Sex:</span>
+                {{productAddForm.shoe_sex}}
+            </div>
+            <div class="drop">
+                <span>Available:</span>
+                {{productAddForm.shoe_availability}}
+            </div>
+            <div class="input">
+                <span>Shoe Price:</span>
+                {{productAddForm.price}}
+            </div>
+            <div class="input">
+                <span>Shoe Color:</span>
+                {{productAddForm.colors}}
+            </div>
+            <div class="input">
+                <span>Size From:</span>
+                {{productAddForm.shoe_size_from}}
+            </div>
+            <div class="input">
+                <span>Size To:</span>
+                {{productAddForm.shoe_size_to}}
+            </div>
+            <div class="text">
+                <span>Description:</span>
+                {{productAddForm.description}}
+            </div>
+            <button type="submit" ><i class="fas fa-cloud-upload-alt"></i> Upload</button>
+        </form>
+
+        <div class="viewIm">
+            <span>This Is The Image You Want To Upload!!!</span>
+            <img src="" id="preview" class="resize" alt="">
+        </div>
+    </div>
+    
+     <!--Upload Sec End-->
+     <script>
+
+        var file = document.getElementById('id_shoe_image'); 
+        var preview = document.getElementById('preview'); 
+        file.addEventListener('change', function() {   
+        preview.src = URL.createObjectURL(this.files[0]); 
+        }, false); 
+
+    </script>
+
+</body>
+</html>

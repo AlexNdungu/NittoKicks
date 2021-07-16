@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <title>NittoKicks:|:: Login</title>
+</head>
+<body>
+    
+    <div class="logbod">
+        <div class="img">
+            <img src="{% static '/images/login.jpg' %}" alt="">
+            <div class="text">
+                <h4>THE BEST </h4>
+                <h2>JUST FOR</h2>
+                <h4>YOU</h4>
+            </div>
+        </div>
+        <div class="login">
+            <div class="sh">
+                <h2>NITTOKICKS</h2>
+                <div class="mainSh" >
+                    <div class="show">
+                        <div class="tSh"></div>
+                    </div>
+                    <div class="theLinks">
+                        <a href="#signin" id="shift1" >Log  in</a>
+                        <a href="#signup" id="shift2" >Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <div class="deForm">
+
+                <!--Login Form-->
+
+                <form method="POST" id="signin">
+                    {% csrf_token %}
+                    <div class="inps">
+                        <div><i class="far fa-user" id="login"></i><input type="text" placeholder="Username" name="username"></div>
+                        <div><i class="fas fa-key" id="login"></i><input type="password" placeholder="Password" name="password"></div>
+                    </div>
+                    <div class="fP" >
+                        <a href="" class="fpass" >Forgot Password?</a>
+                        {% for message in messages %}
+                        <p style="color: crimson;" >{{message}}</p>
+                        {% endfor %}
+                        <button type="submit">Sign In</button>
+                        <a href="" class="ghome" >Go Back Home?</a>
+                    </div>
+                </form>
+
+                <!--Register Form-->
+
+                <form method="POST" id="signup">
+                    {% csrf_token %}
+                    <div class="inps">
+                        <div><i class="far fa-user" id="login"></i>{{reg_form.username}}</div>
+                        <div><i class="fas fa-envelope" id="login"></i>{{reg_form.email}}</div>
+                        <div><i class="fas fa-key" id="login"></i>{{reg_form.password1}}</div>
+                    </div>
+                    <div class="fP" >
+                        <button type="submit">Sign Up</button>
+                        <a href="" class="ghome" >Go Back Home?</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        /* Place Holder */
+        document.getElementById("id_username").placeholder = "Enter Your Username";
+        document.getElementById("id_email").placeholder = "Enter Your Email";
+        document.getElementById("id_password1").placeholder = "Enter Your Password";
+
+
+        /* Link Smooth  */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        /* Link show  */
+
+        let shift1 = document.querySelector('#shift1');
+        let shift2 = document.querySelector('#shift2');
+        let lineShow = document.querySelector('.tSh');
+
+
+        shift1.addEventListener('click', ()=>{
+            lineShow.style.left = '0';
+        })
+
+        shift2.addEventListener('click', ()=>{
+            lineShow.style.left = '50%';
+        })
+
+
+    </script>
+
+</body>
+</html>

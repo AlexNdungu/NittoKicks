@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/delCust.css' %}">
+    <title>NittoKicks:|:: Delete:: </title>
+</head>
+<body>
+    
+    <div class="askDel">
+        
+        <p>Are You sure You Want to delete this customer #{{specificCust}}</p>
+        <div class="action">
+            <form action="{% url 'delCustomer' specificCust.username %}" method="POST" >
+                {% csrf_token %}
+                <button type="submit" id="yes" >Yes</button>
+            </form>
+            <button id="no" ><a href="{% url 'allCustomers' %}">No</a></button>
+        </div>
+        
+    </div>
+
+</body>
+</html>

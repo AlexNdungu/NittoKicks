@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/customers.css' %}">
+    <link rel="stylesheet" href="{% static '/css/inher.css' %}">
+    <link rel="stylesheet" href="{% static '/css/products.css' %}">
+    <title>NittoKicks:|:: Products</title>
+</head>
+<body>
+
+    <!--Head Section-->
+    <div class="beg">
+        <div class="head">
+            <h2>PRODUCTS</h2>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="Search Product" name="customer" id="">
+                <button type="submit"><i class="fas fa-search" id="seaBut"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="addProd">
+        <a href=""><i class="fas fa-plus"></i> Add Product</a>
+    </div>
+
+    <!--Products Section-->
+    <div class="theP">
+
+        <!--The products Themselves-->
+
+        {% for product in products %}
+
+        <div class="theps">
+            <div class="im"><img src="{{product.image_url}}" alt=""></div>
+            <div class="pc">
+                <div class="pc1">
+                    <span>{{product.shoe_name}}</span>
+                    <a href=""><i class="fas fa-edit" id="update"></i></a>
+                </div>
+                <div class="pc2">
+                    <div class="amt"><i class="fas fa-dollar-sign" id="dollar"></i><span>{{product.price}}</span></div>
+                    <div class="action">
+                        <a href="{% url 'delProduct' product.shoe_id  %}"><i class="far fa-trash-alt" id="del"></i></a>
+                        <a href="{% url 'shoeInfo' product.pk %}"><i class="fas fa-ellipsis-v" id="info"></i></a>
+                        <a href=""><i class="fas fa-shopping-cart" id="cat"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>

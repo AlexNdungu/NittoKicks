@@ -1,0 +1,337 @@
+{% extends "Pannel/panHerit.html" %}
+{% load static %}
+
+<!--Header part-->
+{% block extra_head %}
+
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/adProf.css' %}">
+    <title>NittoKicks:|:: Profile</title>
+
+{% endblock %}
+
+<!--Body part-->
+{% block content %}
+
+    <div class="profNew">
+        <div class="prof">   
+            <div class="myIm">
+                <div class="mod">
+                    <a href=""><i class="fas fa-tools" id="settings"></i></a>
+                </div> 
+
+                {% for group in  request.user.groups.all %}
+                <!--Either User Or Admin-->
+                {% if group.name == 'admin' %}
+                <!--Admin Image-->
+                <div class="theP">
+                    <img src="" alt="">
+                </div>
+                <!--Customer Image-->
+                {% else %}
+                <div class="theP">
+                    <img src="{{request.user.profile.Profimage_url}}" alt="">
+                </div>
+                {% endif %}
+                <!--Either User Or Admin-->
+                {% endfor %}
+
+
+                {% for group in  request.user.groups.all %}
+                <!--Either UserName Or AdminName-->
+                {% if group.name == 'admin' %}
+                <!--Admin Name-->
+                <h2>Admin Name</h2>
+                {% else %}
+                <!--Admin Name-->
+                <h2>{{request.user}}</h2>
+                {% endif %}
+                <!--Either User Or Admin-->
+                {% endfor %}
+
+
+            </div>
+            <div class="detail">
+
+                <div class="theLess" >
+                    <span>Name</span>
+                    {% for group in  request.user.groups.all %}
+                    <!--Either User Fullname Or Admin Fullname -->
+                    {% if group.name == 'admin' %}
+                    <!--Admin Name-->
+                    <p>Alex Admin</p>
+                    {% else %}
+                    <!--Customer Name-->
+                    <p>{{request.user.profile.first_name}} {{request.user.profile.last_name}}</p>
+                    {% endif %}
+                    <!--Either User Fullname Or Admin Fullname -->
+                    {% endfor %}
+                </div>
+
+
+                <div class="theLess" >
+                    <span>Sex</span>
+                    {% for group in  request.user.groups.all %}
+                    <!--Either User sex Or Admin sex -->
+                    {% if group.name == 'admin' %}
+                    <!--Admin Sex-->
+                    <p>Male Admin</p>
+                    {% else %}
+                    <!--Customer Name-->
+                    <p>{{request.user.profile.sex}}</p>
+                    {% endif %}
+                    <!--Either User sex Or Admin sex -->
+                    {% endfor %}
+                </div>
+
+
+                <div class="theMore" >
+                    <div class="extra">
+                        <span>Phone</span>
+                        {% for group in  request.user.groups.all %}
+                        <!--Either admin or user phone-->
+                        {% if group.name == 'admin' %}
+                        <!--Admin Phone-->
+                        <p>0703663742A</p>
+                        {% else %}
+                        <!--Customer Phone-->
+                        <p>{{request.user.profile.phone}}</p>
+                        {% endif %}
+                        <!--Either admin or user phone-->
+                        {% endfor %}
+                    </div>
+                    <i class="fas fa-phone-alt" id="cont"></i>
+                </div>
+
+
+                <div class="theMore" >
+                    <div class="extra">
+                        <span>Email</span>
+                        {% for group in  request.user.groups.all %}
+                        <!--Either admin or user email-->
+                        {% if group.name == 'admin' %}
+                        <!--Admin email-->
+                        <p>alexmeta517@gmail.com A</p>
+                        {% else %}
+                        <!--Customer Email-->
+                        <p>{{request.user.profile.email}}</p>
+                        {% endif %}
+                        <!--Either admin or user email-->
+                        {% endfor %}
+                    </div>
+                    <i class="fas fa-envelope" id="cont"></i>
+                </div>
+                <div class="theMore" >
+                    <div class="extra">
+                        <span>Location</span>
+                        {% for group in  request.user.groups.all %}
+                        <!--Either admin or user location-->
+                        {% if group.name == 'admin' %}
+                        <!--Admin location-->
+                        <p>Nairobi A</p>
+                        {% else %}
+                        <!--Customer Location-->
+                        <p>{{request.user.profile.county}}</p>
+                        {% endif %}
+                        <!--Either admin or user location-->
+                        {% endfor %}
+                    </div>
+                    <i class="fas fa-map-marker-alt" id="cont"></i>
+                </div>
+            </div>
+        </div>
+
+        <!--New Request Place-->
+        <div class="new">
+            <!--If Statement for heading-->
+            {% for group in  request.user.groups.all %}
+            {% if group.name == 'admin' %}
+            <h2>LATEST ORDERS</h2>
+            {% else %}
+            <h2>Products Ordered</h2>
+            {% endif %}
+            {% endfor %}
+
+            <div class="orBody">
+                <div class="valuB">
+
+                    <!--Them-->
+                    <div class="ask">
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Id Depending on group-->
+                        {% if group.name == 'admin' %}
+                        <!--admin-->
+                        <div><span>1</span></div>
+                        {% endif %}
+                        <!--Id Depending on group-->
+                        {% endfor %}
+
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Image Product-->
+                        {% if group.name == 'admin' %}
+                        <!--Nothing-->
+                        {% else %}
+                        <div class="askImg" ><img src="" alt=""></div>
+                        {% endif %}
+                        <!--Image Product-->
+                        {% endfor %}
+                        
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Admin sees Customer name while Customer sees Product name-->
+                        {% if group.name == 'admin' %}
+                        <!--admin-->
+                        <div><span>The Meta</span></div>
+                        {% else %}
+                        <!--Customer-->
+                        <div><span>Jordan 1's</span></div>
+                        {% endif %}
+                        <!--Admin sees Customer name while Customer sees Product name-->
+                        {% endfor %}
+
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Customer design doesnt have Date-->
+                        {% if group.name == 'admin' %}
+                        <div><span>4/4/2121</span></div>
+                        {% endif %}
+                        <!--Customer design doesnt have Date-->
+                        {% endfor %}
+
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Admin sees Place While Customer Shoe quantity-->
+                        {% if group.name == 'admin' %}
+                        <!--admin-->
+                        <div><span>Nairobi</span></div>
+                        <!--Customer-->
+                        {% else %}
+                        <div><span>2</span></div>
+                        {% endif %}
+                        <!--Admin sees Place While Customer Shoe quantity-->
+                        {% endfor %}
+
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Order Price-->
+                        {% if group.name == 'admin' %}
+                        <!--admin-->
+                        <!--Customer-->
+                        {% else %}
+                        <div><span>$8000</span></div>
+                        {% endif %}
+                        <!--Order Price-->
+                        {% endfor %}
+
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Admin sees ordered pic while customer pic of the shoe he ordered-->
+                        {% if group.name == 'admin' %}
+                        <!--admin-->
+                        <div class="askImg" ><img src="" alt=""></div>
+                        <!--Customer-->
+                        {% endif %}
+                        <!--Admin sees ordered pic while customer pic of the shoe he ordered-->
+                        {% endfor %}
+                        
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Only Admin Sees This-->
+                        {% if group.name == 'admin' %}
+                        <div class="imSel"  >
+                            <form action="">
+                                <select name="" id="">
+                                    <option value="">Unviewed</option>
+                                    <option value="">Viewed</option>
+                                </select>
+                                <button type="submit" ><i class="fas fa-check-circle" id="save"></i></button>
+                            </form>
+                        </div>
+                        {% endif %}
+                        <!--Only Admin Sees This-->
+                        {% endfor %}
+
+                        {% for group in  request.user.groups.all %}
+                        <!--Links Available-->
+                        {% if group.name == 'admin' %}
+                        <div><a href=""><i class="fas fa-ellipsis-v" id="info"></i></a></div>
+                        {% else %}
+                        <a href=""><i class="far fa-trash-alt" id="del"></i></a>
+                        {% endif %}
+                        <!--Links Available-->
+                        {% endfor %}
+
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--More Details-->
+
+    {% for group in  request.user.groups.all %}
+    {% if group.name == 'admin' %}
+
+    <div class="moreDetails">
+        <!--Customers-->
+        <div class="cust">
+            <div class="link">
+                <a href=""><i class="fas fa-ellipsis-v" id="deLink"></i></a>
+            </div>
+            <div class="tell">
+                <h2>{{allProfiles}}</h2>
+                <span>Customers</span>
+            </div>
+        </div>
+        <!--Orders-->
+        <div class="orde">
+            <div class="link">
+                <a href=""><i class="fas fa-ellipsis-v" id="orde"></i></a>
+            </div>
+            <div class="tell">
+                <h2>100</h2>
+                <span>Orders</span>
+            </div>
+        </div>
+        <!--Products-->
+        <div class="prod">
+            <div class="link">
+                <a href=""><i class="fas fa-ellipsis-v" id="prod"></i></a>
+            </div>
+            <div class="tell">
+                <h2>{{allProducts}}</h2>
+                <span>Products</span>
+            </div>
+        </div>
+        <!--Penging-->
+        <div class="pend">
+            <div class="link">
+                <a href=""><i class="fas fa-ellipsis-v" id="pend"></i></a>
+            </div>
+            <div class="tell">
+                <h2><i class="fas fa-dollar-sign" id="dollar"></i>2000</h2>
+                <span>Pending</span>
+            </div>
+        </div>
+        <!--paid-->
+        <div class="paid">
+            <div class="link">
+                <a href=""><i class="fas fa-ellipsis-v" id="paid"></i></a>
+            </div>
+            <div class="tell">
+                <h2><i class="fas fa-dollar-sign" id="dollar"></i>1000</h2>
+                <span>Paid</span>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+    {% endfor %}
+    
+
+{% endblock %}

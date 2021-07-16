@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/cart.css' %}">
+    <title>NittoKicks:|:: Cart</title>
+</head>
+<body>
+    
+    <!-- The Header -->
+    <div class="hdCart">
+        <div class="hm">
+            <a href=""><i class="fas fa-home" id="home"></i></a>
+        </div>
+        <div class="cent">
+            <div class="total">
+                <span>Total:</span>
+                <div class="totTh">
+                    <p><i class="fas fa-dollar-sign" id="dollar"></i> 12000</p>
+                </div>
+            </div>
+        </div>
+        <div class="log">
+            <a href=""><i class="far fa-user" id="log"></i></a>
+        </div>
+    </div>
+
+    <!-- The Added Product -->
+    <div class="mainIt">
+        <div class="items">
+            <div class="prImage">
+                <img src="" alt="">
+            </div>
+            <span>Jordan 1's</span>
+            <div class="prodAm">
+                <i class="fas fa-caret-up" id="add"></i>
+                <span>2</span>
+                <i class="fas fa-sort-down" id="subtract"></i>
+            </div>
+            <span><i class="fas fa-times" id="multiply"></i></span>
+            <div class="price">
+                <p><i class="fas fa-dollar-sign" id="dollar"></i> 2000</p>
+            </div>
+            <div class="remove">
+                <a href=""><i class="fas fa-trash-alt" id="remove"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="addItem">
+        <a href=""><i class="fas fa-cart-plus" id="cartAdd"></i></a>
+        <a href=""><i class="fas fa-walking" id="cartAdd"></i></a>
+    </div>
+</body>
+</html>
